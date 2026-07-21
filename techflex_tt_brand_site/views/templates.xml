@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <template id="global_header" name="TechFlex Global Header">
+    <header class="tfx-header" id="tfxHeader">
+      <div class="tfx-topbar">
+        <div class="tfx-shell tfx-topbar-inner">
+          <span>Customer Service <strong>1-868-235-4919</strong></span>
+          <span>Sales WhatsApp <strong>868-294-FLEX</strong></span>
+          <span>Repairs WhatsApp <strong>868-275-TECH</strong></span>
+        </div>
+      </div>
+      <div class="tfx-mainbar">
+        <div class="tfx-shell tfx-mainbar-inner">
+          <a class="tfx-logo" href="/" aria-label="TechFlex TT Limited home">
+            <img src="/techflex_tt_brand_site/static/src/img/techflex-original-logo.png" alt="TechFlex TT Limited"/>
+          </a>
+          <button class="tfx-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="tfx-nav" aria-label="Main navigation">
+            <a href="/" data-path="/">Home</a>
+            <a href="/tech-rentals" data-path="/tech-rentals">Tech Rentals</a>
+            <a href="/about-us" data-path="/about-us">About Us</a>
+            <a href="/team" data-path="/team">Team</a>
+            <a href="/contact-us" data-path="/contact-us">Contact Us</a>
+            <a class="tfx-nav-cta" href="/tech-rentals#rental-form">Request a Quote</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </template>
+
+  <template id="global_footer" name="TechFlex Global Footer">
+    <footer class="tfx-footer">
+      <div class="tfx-footer-glow"></div>
+      <div class="tfx-shell tfx-footer-grid">
+        <div class="tfx-footer-brand">
+          <img src="/techflex_tt_brand_site/static/src/img/techflex-original-logo.png" alt="TechFlex TT Limited"/>
+          <p>Your trusted technology partner in Trinidad &amp; Tobago. Quality products, flexible rentals and exceptional support for homes, businesses, schools and events.</p>
+          <div class="tfx-socials" aria-label="Social links">
+            <a href="https://www.facebook.com/techflextt" target="_blank" rel="noopener">f</a>
+            <a href="https://www.instagram.com/techflextt" target="_blank" rel="noopener">ig</a>
+            <a href="https://www.tiktok.com/@techflextt" target="_blank" rel="noopener">tk</a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener">yt</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">in</a>
+          </div>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="/about-us">About Us</a>
+          <a href="/team">Meet the Team</a>
+          <a href="/tech-rentals">Tech Rentals</a>
+          <a href="/contact-us">Contact Us</a>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <a href="/tech-rentals">Laptop Rentals</a>
+          <a href="/tech-rentals">Projector Rentals</a>
+          <a href="/about-us#solutions">IT Support</a>
+          <a href="/about-us#solutions">Networking</a>
+        </div>
+        <div>
+          <h3>Customer Care</h3>
+          <a href="/contact-us">Sales Support</a>
+          <a href="/contact-us">Technical Support</a>
+          <a href="/tech-rentals#faq">Rental FAQ</a>
+          <a href="/contact-us">Business Enquiries</a>
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <p class="tfx-footer-contact">1-868-235-4919<br/>info@techflextt.com<br/>#105 Penco Street, Montrose, Chaguanas<br/>Wilson Road, Scarborough, Tobago</p>
+        </div>
+      </div>
+      <div class="tfx-shell tfx-footer-bottom">
+        <span>© 2026 TechFlex TT Limited. All Rights Reserved.</span>
+        <span>Built as a clean, responsive Odoo website module.</span>
+      </div>
+    </footer>
+  </template>
+
+  <template id="shared_cta" name="TechFlex Shared CTA">
+    <section class="tfx-cta-strip">
+      <div class="tfx-shell tfx-cta-inner">
+        <div class="tfx-cta-icon">⚡</div>
+        <div>
+          <h2>Need equipment fast?</h2>
+          <p>Contact TechFlex TT for rental availability, corporate packages and support that fits your schedule.</p>
+        </div>
+        <div class="tfx-cta-actions">
+          <a class="tfx-btn tfx-btn-orange" href="/tech-rentals#rental-form">Request a Rental Quote</a>
+          <a class="tfx-btn tfx-btn-ghost-light" href="tel:18682354919">Call Now</a>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="page_home" name="TechFlex TT Home">
+    <t t-call="website.layout">
+      <div id="wrap" class="tfx-site tfx-page-home">
+        <section class="tfx-hero tfx-home-hero">
+          <div class="tfx-hero-bg"></div>
+          <div class="tfx-shell tfx-hero-grid">
+            <div class="tfx-hero-copy">
+              <span class="tfx-eyebrow">TechFlex TT Limited</span>
+              <h1>Technology that works hard for your business, events and everyday life.</h1>
+              <p>Affordable tech. Exceptional service. From short-term rentals and device support to networking, repairs and business-ready technology solutions across Trinidad &amp; Tobago.</p>
+              <div class="tfx-hero-actions">
+                <a class="tfx-btn tfx-btn-orange" href="/tech-rentals#rental-form">Request Rental Quote</a>
+                <a class="tfx-btn tfx-btn-blue" href="/contact-us">Talk to Our Team</a>
+              </div>
+              <div class="tfx-hero-points">
+                <span>Fast local support</span>
+                <span>Flexible rentals</span>
+                <span>Trusted service</span>
+              </div>
+            </div>
+            <div class="tfx-hero-visual">
+              <img src="/techflex_tt_brand_site/static/src/img/hero-system.svg" alt="TechFlex technology services illustration"/>
+            </div>
+          </div>
+        </section>
+
+        <section class="tfx-section tfx-stats-section">
+          <div class="tfx-shell tfx-stat-grid">
+            <div class="tfx-stat"><strong>2015</strong><span>Serving customers since</span></div>
+            <div class="tfx-stat"><strong>2</strong><span>Trinidad &amp; Tobago locations</span></div>
+            <div class="tfx-stat"><strong>1-65</strong><span>Units available per rental</span></div>
+            <div class="tfx-stat"><strong>360°</strong><span>Sales, rentals and support</span></div>
+          </div>
+        </section>
+
+        <section class="tfx-section" id="solutions">
+          <div class="tfx-shell">
+            <div class="tfx-section-head">
+              <span class="tfx-kicker">What we do</span>
+              <h2>One partner for everyday tech, business support and rental needs.</h2>
+              <p>TechFlex TT should feel clean, confident and highly branded—built around clear sections, strong CTAs and a layout that holds up perfectly on desktop and mobile.</p>
+            </div>
+            <div class="tfx-card-grid tfx-services-grid">
+              <article class="tfx-service-card">
+                <div class="tfx-card-icon">💻</div>
+                <h3>Tech Rentals</h3>
+                <p>Laptops, desktops, tablets, projectors, displays and accessories for teams, events, training and projects.</p>
+                <a href="/tech-rentals">View rental options</a>
+              </article>
+              <article class="tfx-service-card">
+                <div class="tfx-card-icon">🛠</div>
+                <h3>Repairs &amp; Support</h3>
+                <p>Diagnostics, upgrades, hardware repairs, software setup and practical technical guidance from a local team.</p>
+                <a href="/contact-us">Get support</a>
+              </article>
+              <article class="tfx-service-card">
+                <div class="tfx-card-icon">🌐</div>
+                <h3>Networking</h3>
+                <p>Wired and wireless setup, troubleshooting and support for homes, offices and small business environments.</p>
+                <a href="/contact-us">Discuss a setup</a>
+              </article>
+              <article class="tfx-service-card">
+                <div class="tfx-card-icon">🏢</div>
+                <h3>Business Solutions</h3>
+                <p>Reliable technology packages for offices, schools, corporate users and event teams that need dependable service.</p>
+                <a href="/contact-us">Plan a package</a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="tfx-split-section">
+          <div class="tfx-shell tfx-split-grid">
+            <div class="tfx-split-visual tfx-rental-visual-small">
+              <img src="/techflex_tt_brand_site/static/src/img/rental-panel.svg" alt="Long term and short term tech rentals"/>
+            </div>
+            <div class="tfx-split-copy">
+              <span class="tfx-kicker">Rental ready</span>
+              <h2>Short-term, long-term and corporate rentals without the headache.</h2>
+              <p>Build a package around what you need: laptops for training, displays for events, tablets for check-in, projectors for presentations or desktop systems for temporary workstations.</p>
+              <div class="tfx-check-list">
+                <span>Well-maintained equipment</span>
+                <span>Pickup or delivery options</span>
+                <span>Flexible rental periods</span>
+                <span>Support during your rental</span>
+              </div>
+              <a class="tfx-btn tfx-btn-orange" href="/tech-rentals">Start a Rental Request</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="tfx-section tfx-process-section">
+          <div class="tfx-shell">
+            <div class="tfx-section-head compact">
+              <span class="tfx-kicker">Simple process</span>
+              <h2>How TechFlex helps you move quickly.</h2>
+            </div>
+            <div class="tfx-process-grid">
+              <div class="tfx-step"><strong>01</strong><h3>Tell us what you need</h3><p>Share the equipment, quantity, location and dates.</p></div>
+              <div class="tfx-step"><strong>02</strong><h3>Get a clear recommendation</h3><p>We help match the right devices or service plan.</p></div>
+              <div class="tfx-step"><strong>03</strong><h3>Confirm and prepare</h3><p>Your package is arranged for pickup, delivery or support.</p></div>
+              <div class="tfx-step"><strong>04</strong><h3>Stay supported</h3><p>The team remains available for questions and technical help.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <t t-call="techflex_tt_brand_site.shared_cta"/>
+      </div>
+    </t>
+  </template>
+
+  <template id="page_rentals" name="TechFlex TT Rentals">
+    <t t-call="website.layout">
+      <div id="wrap" class="tfx-site tfx-page-rentals">
+        <section class="tfx-inner-hero tfx-rentals-hero">
+          <div class="tfx-shell tfx-inner-hero-grid">
+            <div>
+              <span class="tfx-eyebrow">Corporate &amp; Event Rentals</span>
+              <h1>Flexible tech rentals for teams, training, events and temporary workspaces.</h1>
+              <p>Request laptops, desktops, tablets, projectors, monitors and accessories with a clean process built around your rental dates, specifications and support needs.</p>
+            </div>
+            <div class="tfx-inner-hero-card">
+              <strong>1–65 units</strong>
+              <span>Available per rental request</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="tfx-section tfx-rental-main" id="rental-form">
+          <div class="tfx-shell tfx-rental-layout">
+            <div class="tfx-form-panel">
+              <span class="tfx-kicker">Rental request form</span>
+              <h2>Tell us what your project needs.</h2>
+              <p class="tfx-form-intro">Complete the form below and the TechFlex TT team will get back to you with availability and a custom rental solution.</p>
+              <form class="tfx-form" action="/tech-rentals/submit" method="post">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <div class="tfx-form-row three">
+                  <label>First Name *<input name="first_name" required="required" type="text"/></label>
+                  <label>Last Name *<input name="last_name" required="required" type="text"/></label>
+                  <label>Company Name<input name="company_name" type="text"/></label>
+                </div>
+                <div class="tfx-form-row two">
+                  <label>Email Address *<input name="email" required="required" type="email"/></label>
+                  <label>Phone Number *<input name="phone" required="required" type="tel"/></label>
+                </div>
+                <label>Business Address<textarea name="business_address" rows="3"></textarea></label>
+                <fieldset>
+                  <legend>Equipment Required *</legend>
+                  <div class="tfx-check-grid">
+                    <label><input type="checkbox" name="equipment" value="Desktops"/> Desktops</label>
+                    <label><input type="checkbox" name="equipment" value="Laptops"/> Laptops</label>
+                    <label><input type="checkbox" name="equipment" value="Tablets"/> Tablets</label>
+                    <label><input type="checkbox" name="equipment" value="TVs / Monitors"/> TVs / Monitors</label>
+                    <label><input type="checkbox" name="equipment" value="Projectors"/> Projectors</label>
+                    <label><input type="checkbox" name="equipment" value="Printers"/> Printers</label>
+                    <label><input type="checkbox" name="equipment" value="Accessories / Peripherals"/> Accessories / Peripherals</label>
+                    <label><input type="checkbox" name="equipment" value="Other"/> Other</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Specification Level *</legend>
+                  <div class="tfx-radio-row">
+                    <label><input type="radio" name="spec_level" value="Basic" required="required"/> Basic</label>
+                    <label><input type="radio" name="spec_level" value="Mid Range"/> Mid Range</label>
+                    <label><input type="radio" name="spec_level" value="High End"/> High End</label>
+                  </div>
+                </fieldset>
+                <div class="tfx-form-row three">
+                  <label>Number of Units *<select name="units" required="required"><option value="">Select number of units</option><option>1-5</option><option>6-15</option><option>16-30</option><option>31-65</option></select></label>
+                  <label>Rental Start Date *<input name="start_date" required="required" type="date"/></label>
+                  <label>Rental End / Duration *<input name="end_date" required="required" type="text" placeholder="Date or duration"/></label>
+                </div>
+                <label>Pickup or Delivery *<select name="fulfillment" required="required"><option value="">Select an option</option><option>Pickup</option><option>Delivery</option><option>Not sure yet</option></select></label>
+                <label>Additional Information / Requirements<textarea name="message" rows="5" placeholder="Tell us about the event, location, software needs, setup support or other requirements."></textarea></label>
+                <button class="tfx-btn tfx-btn-blue" type="submit">Submit Request</button>
+              </form>
+            </div>
+            <aside class="tfx-rental-side">
+              <img src="/techflex_tt_brand_site/static/src/img/rental-panel.svg" alt="TechFlex long term and short term rentals"/>
+              <div class="tfx-faq-box" id="faq">
+                <span class="tfx-kicker">FAQ</span>
+                <h3>Rental Questions</h3>
+                <details><summary>What types of equipment are available for rent?</summary><p>Laptops, desktops, tablets, TVs, monitors, projectors, printers and accessories.</p></details>
+                <details><summary>What is the minimum and maximum number of units?</summary><p>Rental quantity depends on availability. This form supports requests from 1 to 65 units.</p></details>
+                <details><summary>Do you offer delivery and pickup?</summary><p>Pickup and delivery can be discussed based on your location, timing and package size.</p></details>
+                <details><summary>Is technical support available?</summary><p>Yes. Support can be included depending on your rental needs and event requirements.</p></details>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="tfx-section tfx-rental-cats">
+          <div class="tfx-shell">
+            <div class="tfx-section-head compact"><span class="tfx-kicker">Rental categories</span><h2>Build the right package.</h2></div>
+            <div class="tfx-card-grid tfx-category-grid">
+              <div class="tfx-category-card"><strong>Laptops</strong><span>Training, teams, remote work</span></div>
+              <div class="tfx-category-card"><strong>Desktops</strong><span>Temporary office stations</span></div>
+              <div class="tfx-category-card"><strong>Tablets</strong><span>Check-in, events, mobile teams</span></div>
+              <div class="tfx-category-card"><strong>Projectors</strong><span>Presentations and conferences</span></div>
+              <div class="tfx-category-card"><strong>Displays</strong><span>Meetings, booths and signage</span></div>
+              <div class="tfx-category-card"><strong>Accessories</strong><span>Keyboards, mice, cables and more</span></div>
+            </div>
+          </div>
+        </section>
+        <t t-call="techflex_tt_brand_site.shared_cta"/>
+      </div>
+    </t>
+  </template>
+
+  <template id="page_about" name="TechFlex TT About Us">
+    <t t-call="website.layout">
+      <div id="wrap" class="tfx-site tfx-page-about">
+        <section class="tfx-inner-hero tfx-about-hero">
+          <div class="tfx-shell tfx-inner-hero-grid">
+            <div>
+              <span class="tfx-eyebrow">About TechFlex TT</span>
+              <h1>Driven by technology. Committed to people.</h1>
+              <p>TechFlex TT Limited is a Trinidad &amp; Tobago technology company focused on quality products, reliable rentals, repairs, networking and support that customers can actually depend on.</p>
+            </div>
+            <div class="tfx-inner-hero-card"><strong>Since 2015</strong><span>Affordable technology and exceptional service</span></div>
+          </div>
+        </section>
+
+        <section class="tfx-split-section tfx-story-section">
+          <div class="tfx-shell tfx-split-grid reverse-mobile">
+            <div class="tfx-split-copy">
+              <span class="tfx-kicker">Our story</span>
+              <h2>Tech solutions made simple, local and reliable.</h2>
+              <p>Since 2015, TechFlex TT has built its name by helping customers access high-quality electronics, practical technical support and flexible rental options without overcomplicating the process.</p>
+              <p>The new website direction should reflect that same promise: modern, helpful, bold, easy to navigate and strong enough to feel like a real technology brand.</p>
+              <div class="tfx-check-list">
+                <span>Quality products</span><span>Expert guidance</span><span>Rental support</span><span>Local service</span>
+              </div>
+            </div>
+            <div class="tfx-split-visual"><img src="/techflex_tt_brand_site/static/src/img/about-visual.svg" alt="TechFlex brand and service visual"/></div>
+          </div>
+        </section>
+
+        <section class="tfx-section" id="solutions">
+          <div class="tfx-shell">
+            <div class="tfx-section-head"><span class="tfx-kicker">Capabilities</span><h2>Designed around the services customers already come for.</h2></div>
+            <div class="tfx-card-grid tfx-values-grid">
+              <article><div class="tfx-card-icon">🧰</div><h3>Software &amp; Hardware Services</h3><p>Installation, setup, maintenance and repair of software and hardware.</p></article>
+              <article><div class="tfx-card-icon">📦</div><h3>Tech Rentals</h3><p>Rentals for laptops, desktops, tablets, projectors, TVs and supporting accessories.</p></article>
+              <article><div class="tfx-card-icon">📡</div><h3>Networking</h3><p>Set up, configure and troubleshoot wired or wireless networks for homes and businesses.</p></article>
+              <article><div class="tfx-card-icon">🎧</div><h3>Technical Support</h3><p>On-site visits, house calls, diagnostics and practical support when customers need help.</p></article>
+              <article><div class="tfx-card-icon">💾</div><h3>Data Recovery</h3><p>Specialized assistance for lost, corrupted or difficult-to-access files and data.</p></article>
+              <article><div class="tfx-card-icon">🔧</div><h3>Computer Repairs</h3><p>Builds, upgrades, repairs, virus removal and troubleshooting for computer systems.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="tfx-section tfx-locations-section">
+          <div class="tfx-shell tfx-location-grid">
+            <div><span class="tfx-kicker">Store locations</span><h2>Serving customers in Trinidad and Tobago.</h2><p>Clear location blocks keep the site helpful without bringing back ecommerce clutter.</p></div>
+            <div class="tfx-location-card"><strong>Trinidad</strong><span>#105 Penco Street, Montrose, Chaguanas</span></div>
+            <div class="tfx-location-card"><strong>Tobago</strong><span>Wilson Road, Scarborough, next to Royal Castle</span></div>
+          </div>
+        </section>
+        <t t-call="techflex_tt_brand_site.shared_cta"/>
+      </div>
+    </t>
+  </template>
+
+  <template id="page_team" name="TechFlex TT Team">
+    <t t-call="website.layout">
+      <div id="wrap" class="tfx-site tfx-page-team">
+        <section class="tfx-inner-hero tfx-team-hero">
+          <div class="tfx-shell tfx-inner-hero-grid">
+            <div>
+              <span class="tfx-eyebrow">Meet the Team</span>
+              <h1>The people behind the service.</h1>
+              <p>A clean team page with consistent cards, polished spacing and a layout that stays balanced across desktop, tablet and mobile.</p>
+            </div>
+            <div class="tfx-inner-hero-card"><strong>Local team</strong><span>Sales, support, operations and technical service</span></div>
+          </div>
+        </section>
+
+        <section class="tfx-section">
+          <div class="tfx-shell">
+            <div class="tfx-team-grid">
+              <article class="tfx-team-card"><div class="tfx-avatar">K</div><h3>Kleavon</h3><p>Managing Director</p></article>
+              <article class="tfx-team-card"><div class="tfx-avatar">S</div><h3>Stephanie</h3><p>Marketing Director</p></article>
+              <article class="tfx-team-card"><div class="tfx-avatar">P</div><h3>Paul</h3><p>Operations Manager</p></article>
+              <article class="tfx-team-card"><div class="tfx-avatar">K</div><h3>Katelan</h3><p>Social Media Manager</p></article>
+              <article class="tfx-team-card"><div class="tfx-avatar">B</div><h3>Brandon</h3><p>Technician</p></article>
+              <article class="tfx-team-card"><div class="tfx-avatar">E</div><h3>Emmanuel</h3><p>Senior OTG Technician</p></article>
+              <article class="tfx-team-card"><div class="tfx-avatar">A</div><h3>Ann Marie</h3><p>Sales Technician, Tobago</p></article>
+              <article class="tfx-team-card"><div class="tfx-avatar">C</div><h3>Cortez</h3><p>Technician, Tobago</p></article>
+              <article class="tfx-team-card tfx-team-card-join"><div class="tfx-avatar">+</div><h3>Need help?</h3><p>Contact the team for sales, rentals and support.</p><a href="/contact-us">Contact Us</a></article>
+            </div>
+          </div>
+        </section>
+        <t t-call="techflex_tt_brand_site.shared_cta"/>
+      </div>
+    </t>
+  </template>
+
+  <template id="page_contact" name="TechFlex TT Contact Us">
+    <t t-call="website.layout">
+      <div id="wrap" class="tfx-site tfx-page-contact">
+        <section class="tfx-inner-hero tfx-contact-hero">
+          <div class="tfx-shell tfx-inner-hero-grid">
+            <div>
+              <span class="tfx-eyebrow">Contact TechFlex TT</span>
+              <h1>Sales, rentals, repairs and support in one place.</h1>
+              <p>Reach out for product questions, rental availability, repair support, business packages or general enquiries.</p>
+            </div>
+            <div class="tfx-inner-hero-card"><strong>Mon–Fri 9–5</strong><span>Saturday 10–2 • Sunday closed</span></div>
+          </div>
+        </section>
+
+        <section class="tfx-section tfx-contact-main">
+          <div class="tfx-shell tfx-contact-grid">
+            <div class="tfx-contact-info">
+              <span class="tfx-kicker">Contact details</span>
+              <h2>Talk to the right team.</h2>
+              <div class="tfx-contact-card"><strong>All Inquiries</strong><span>1-868-235-4919</span><small>Mon–Fri: 9:00AM–5:00PM • Sat: 10:00AM–2:00PM</small></div>
+              <div class="tfx-contact-card"><strong>Sales &amp; Customer Support WhatsApp</strong><span>868-294-FLEX (3539)</span><small>For product, rental and customer service support.</small></div>
+              <div class="tfx-contact-card"><strong>Repairs &amp; Technical Support WhatsApp</strong><span>868-275-TECH (8324)</span><small>For repair, setup and technical assistance.</small></div>
+              <div class="tfx-contact-card"><strong>Email</strong><span>info@techflextt.com</span><small>Send general enquiries or follow-up information.</small></div>
+            </div>
+            <div class="tfx-form-panel">
+              <span class="tfx-kicker">Send a message</span>
+              <h2>How can we help?</h2>
+              <form class="tfx-form" action="/contact-us/submit" method="post">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <label>Name *<input name="name" required="required" type="text"/></label>
+                <div class="tfx-form-row two">
+                  <label>Email *<input name="email" required="required" type="email"/></label>
+                  <label>Phone<input name="phone" type="tel"/></label>
+                </div>
+                <label>Subject *<input name="subject" required="required" type="text"/></label>
+                <label>Comment or Message *<textarea name="message" required="required" rows="6"></textarea></label>
+                <button class="tfx-btn tfx-btn-blue" type="submit">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="tfx-section tfx-locations-section contact-locations">
+          <div class="tfx-shell tfx-location-grid">
+            <div><span class="tfx-kicker">Locations</span><h2>Visit TechFlex TT.</h2></div>
+            <div class="tfx-location-card"><strong>Trinidad</strong><span>#105 Penco Street, Montrose, Chaguanas</span></div>
+            <div class="tfx-location-card"><strong>Tobago</strong><span>Wilson Road, Scarborough, next to Royal Castle</span></div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+
+  <template id="page_thank_you" name="TechFlex Thank You">
+    <t t-call="website.layout">
+      <div id="wrap" class="tfx-site">
+        <section class="tfx-thankyou">
+          <div class="tfx-shell">
+            <div class="tfx-thankyou-card">
+              <span class="tfx-kicker">Thank you</span>
+              <h1><t t-esc="heading"/></h1>
+              <p><t t-esc="message"/></p>
+              <a class="tfx-btn tfx-btn-orange" href="/">Back to Home</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+
+</odoo>
