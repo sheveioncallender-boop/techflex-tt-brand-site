@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <template id="techflex_direct_assets" inherit_id="website.layout" name="TechFlex Direct Website Assets">
+    <xpath expr="//head" position="inside">
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Montserrat:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+      <link rel="stylesheet" href="/techflex_tt_brand_site/static/src/css/techflex.css?v=20260721-v102"/>
+      <script defer="defer" src="/techflex_tt_brand_site/static/src/js/techflex.js?v=20260721-v102"></script>
+      <link rel="icon" type="image/png" href="/techflex_tt_brand_site/static/src/img/techflex-favicon.png"/>
+      <link rel="apple-touch-icon" href="/techflex_tt_brand_site/static/src/img/techflex-favicon-192.png"/>
+    </xpath>
+    <xpath expr="//header" position="replace">
+      <t t-call="techflex_tt_brand_site.global_header"/>
+    </xpath>
+    <xpath expr="//footer" position="replace">
+      <t t-call="techflex_tt_brand_site.global_footer"/>
+    </xpath>
+  </template>
+</odoo>

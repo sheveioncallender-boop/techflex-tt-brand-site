@@ -1,0 +1,36 @@
+TechFlex TT Brand Website v19.0.1.0.2 Validation
+=================================================
+
+Build goal
+----------
+Premium Canboulay-style TechFlex informational website rebuild based on the latest navy / orange branded concept.
+
+Scope
+-----
+PASS: Informational website only
+PASS: No website_sale dependency
+PASS: No shop route override
+PASS: No Odoo product page override
+PASS: No product model inheritance
+PASS: Original TechFlex TT logo included and used in header/footer
+PASS: Custom global header and footer included
+PASS: Homepage, Services, Rentals, About, Team, Contact, Thank You pages included
+PASS: Rental form posts to CRM lead
+PASS: Contact form posts to CRM lead
+PASS: Direct-loading CSS and JS included through website.layout
+PASS: Mobile hamburger menu included
+PASS: Desktop and mobile responsive CSS included
+
+Static checks
+-------------
+PASS: XML parsed successfully: views/assets.xml
+PASS: XML parsed successfully: views/templates.xml
+PASS: Python syntax compiled successfully: controllers/main.py
+PASS: Manifest parsed successfully
+PASS: Local image assets referenced in templates/CSS
+
+Notes
+-----
+This build uses the new TechFlex premium direction: dark navy hero, orange/blue angled brand accents,
+original logo, branded service cards, rentals preview, why-choose section, about/statistics band,
+CTA strip, and full footer. Install on staging first and review desktop/mobile before final refinements.

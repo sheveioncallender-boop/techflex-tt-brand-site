@@ -1,0 +1,330 @@
+:root{
+  --tfx-navy:#061a33;
+  --tfx-navy-2:#08254a;
+  --tfx-blue:#005fad;
+  --tfx-blue-2:#0b72c6;
+  --tfx-orange:#ff5b12;
+  --tfx-orange-2:#ff7a1a;
+  --tfx-ink:#081936;
+  --tfx-muted:#5c687b;
+  --tfx-line:#e7edf5;
+  --tfx-soft:#f5f8fc;
+  --tfx-white:#ffffff;
+  --tfx-shadow:0 18px 50px rgba(6,26,51,.12);
+  --tfx-radius:12px;
+  --tfx-radius-lg:22px;
+  --tfx-font:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --tfx-heading:'Montserrat','Inter',system-ui,sans-serif;
+}
+
+html{scroll-behavior:smooth;}
+body{font-family:var(--tfx-font);color:var(--tfx-ink);background:#fff;}
+.tfx-site,.tfx-header,.tfx-footer{font-family:var(--tfx-font);color:var(--tfx-ink);}
+.tfx-site *,.tfx-header *,.tfx-footer *{box-sizing:border-box;}
+.tfx-site a,.tfx-header a,.tfx-footer a{text-decoration:none;}
+.tfx-shell{width:min(1120px,calc(100% - 48px));margin:0 auto;}
+.tfx-site svg,.tfx-header svg,.tfx-footer svg{width:1em;height:1em;display:block;}
+.tfx-site img{max-width:100%;display:block;}
+
+/* Header */
+.tfx-header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 8px 24px rgba(6,26,51,.08);}
+.tfx-topbar{background:linear-gradient(90deg,#061a33 0%,#08254a 55%,#061a33 100%);color:#fff;font-size:13px;}
+.tfx-topbar-inner{height:36px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.tfx-topbar a,.tfx-topbar span{color:#fff;display:flex;align-items:center;gap:8px;white-space:nowrap;}
+.tfx-topbar-icon{color:var(--tfx-orange);font-weight:800;}
+.tfx-mainbar{background:#fff;}
+.tfx-mainbar-inner{height:104px;display:flex;align-items:center;justify-content:space-between;gap:28px;}
+.tfx-logo{display:flex;align-items:center;flex:0 0 auto;}
+.tfx-logo img{height:62px;width:auto;max-width:300px;object-fit:contain;}
+.tfx-nav{display:flex;align-items:center;gap:22px;margin-left:auto;}
+.tfx-nav > a,.tfx-nav-dropdown > a{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.01em;color:#071a35;position:relative;padding:14px 0;display:flex;align-items:center;gap:6px;}
+.tfx-nav > a::after,.tfx-nav-dropdown > a::after{content:"";position:absolute;left:0;right:0;bottom:5px;height:2px;background:var(--tfx-orange);transform:scaleX(0);transform-origin:left;transition:.2s ease;}
+.tfx-nav > a:hover::after,.tfx-nav > a.is-active::after,.tfx-nav-dropdown > a:hover::after,.tfx-nav-dropdown > a.is-active::after{transform:scaleX(1);}
+.tfx-nav > a:hover,.tfx-nav-dropdown > a:hover,.tfx-nav > a.is-active,.tfx-nav-dropdown > a.is-active{color:var(--tfx-orange);}
+.tfx-nav .tfx-nav-cta{padding:15px 23px;color:#fff;background:linear-gradient(135deg,var(--tfx-orange),#ff6e1e);border-radius:6px;box-shadow:0 12px 26px rgba(255,91,18,.25);}
+.tfx-nav .tfx-nav-cta::after{display:none;}
+.tfx-nav .tfx-nav-cta:hover{color:#fff;transform:translateY(-1px);}
+.tfx-nav-dropdown{position:relative;}
+.tfx-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);min-width:240px;background:#fff;border:1px solid var(--tfx-line);border-radius:12px;box-shadow:var(--tfx-shadow);padding:10px;display:grid;gap:2px;opacity:0;visibility:hidden;transition:.18s ease;}
+.tfx-dropdown-menu a{color:#0a1d3d;font-weight:700;font-size:13px;padding:10px 12px;border-radius:8px;}
+.tfx-dropdown-menu a:hover{background:#f3f7fb;color:var(--tfx-orange);}
+.tfx-nav-dropdown:hover .tfx-dropdown-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+.tfx-menu-toggle{display:none;width:48px;height:48px;border:0;background:var(--tfx-navy);border-radius:10px;align-items:center;justify-content:center;gap:5px;flex-direction:column;cursor:pointer;}
+.tfx-menu-toggle span{width:22px;height:2px;background:#fff;border-radius:99px;transition:.2s ease;}
+body.tfx-mobile-menu-open .tfx-menu-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+body.tfx-mobile-menu-open .tfx-menu-toggle span:nth-child(2){opacity:0;}
+body.tfx-mobile-menu-open .tfx-menu-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* Typography */
+.tfx-eyebrow,.tfx-kicker{font-size:12px;line-height:1.1;text-transform:uppercase;letter-spacing:.05em;color:var(--tfx-orange);font-weight:900;font-family:var(--tfx-heading);}
+.tfx-site h1,.tfx-site h2,.tfx-site h3,.tfx-footer h2,.tfx-footer h3{font-family:var(--tfx-heading);margin:0;color:var(--tfx-ink);line-height:1.08;font-weight:900;}
+.tfx-site h1{font-size:clamp(42px,5.3vw,66px);letter-spacing:-.045em;}
+.tfx-site h2{font-size:clamp(28px,3vw,42px);letter-spacing:-.035em;}
+.tfx-site h3{font-size:17px;letter-spacing:-.01em;}
+.tfx-site p{margin:0;color:var(--tfx-muted);line-height:1.65;font-size:16px;}
+.tfx-title-line,.tfx-head-line{width:42px;height:4px;border-radius:99px;background:var(--tfx-orange);margin:22px 0;}
+.tfx-head-line{height:3px;background:var(--tfx-blue);margin:18px auto 0;}
+.tfx-head-line.left{margin-left:0;margin-right:0;}
+.tfx-section{padding:76px 0;position:relative;background:#fff;}
+.tfx-section-head{max-width:760px;margin:0 0 34px;}
+.tfx-section-head.tfx-centered{text-align:center;margin-left:auto;margin-right:auto;}
+.tfx-section-head h2 span,.tfx-rental-intro h2 span,.tfx-about-copy h2 span,.tfx-about-copy h2 em,.tfx-why-panel h2 span,.tfx-page-hero h1 span{color:var(--tfx-orange);font-style:normal;}
+.tfx-desktop-break{display:block;}
+
+/* Buttons */
+.tfx-btn,.tfx-mini-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:7px;font-weight:900;text-transform:uppercase;letter-spacing:.01em;line-height:1;transition:.2s ease;border:2px solid transparent;font-size:14px;}
+.tfx-btn{min-height:52px;padding:0 26px;}
+.tfx-btn-primary{background:linear-gradient(135deg,var(--tfx-orange),#ff6f21);color:#fff;box-shadow:0 14px 28px rgba(255,91,18,.25);}
+.tfx-btn-primary:hover{color:#fff;transform:translateY(-2px);box-shadow:0 20px 36px rgba(255,91,18,.3);}
+.tfx-btn-blue{background:linear-gradient(135deg,var(--tfx-blue),#0d73ce);color:#fff;box-shadow:0 14px 28px rgba(0,95,173,.25);}
+.tfx-btn-blue:hover{color:#fff;transform:translateY(-2px);}
+.tfx-btn-outline-light{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.88);color:#fff;}
+.tfx-btn-outline-light:hover{background:#fff;color:var(--tfx-navy);transform:translateY(-2px);}
+.tfx-mini-btn{min-height:42px;padding:0 18px;border-color:var(--tfx-blue);color:var(--tfx-blue);font-size:12px;background:#fff;}
+.tfx-mini-btn:hover{background:var(--tfx-blue);color:#fff;}
+
+/* Home Hero */
+.tfx-hero{min-height:390px;position:relative;overflow:hidden;background:var(--tfx-navy);isolation:isolate;display:flex;align-items:center;}
+.tfx-hero-photo{position:absolute;inset:0 0 0 43%;background:url('/techflex_tt_brand_site/static/src/img/hero-techflex.webp') center center/cover no-repeat;z-index:0;}
+.tfx-hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,26,51,.98) 0%,rgba(6,26,51,.93) 36%,rgba(6,26,51,.36) 57%,rgba(6,26,51,.18) 100%);z-index:1;}
+.tfx-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,rgba(4,17,34,.98) 0 46%,rgba(4,17,34,.72) 46% 47%,transparent 47%);z-index:2;}
+.tfx-hero-shape{position:absolute;z-index:3;right:-4%;background:linear-gradient(135deg,var(--tfx-orange),#ff7624);transform:skewX(-30deg);box-shadow:0 18px 50px rgba(255,91,18,.16);}
+.tfx-hero-shape-one{width:120px;height:360px;bottom:-70px;}
+.tfx-hero-shape-two{width:44px;height:420px;right:12%;bottom:-120px;background:#0066be;opacity:.9;}
+.tfx-hero-inner{position:relative;z-index:4;display:grid;grid-template-columns:minmax(0,550px) 1fr;align-items:center;min-height:390px;}
+.tfx-hero-copy{padding:72px 0;}
+.tfx-hero-copy h1{color:#fff;text-transform:uppercase;letter-spacing:-.035em;}
+.tfx-hero-copy h1 span{color:var(--tfx-orange);}
+.tfx-hero-copy p{color:rgba(255,255,255,.92);max-width:430px;font-size:17px;}
+.tfx-hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:28px;}
+
+/* Service cards */
+.tfx-service-grid{display:grid;gap:28px;}
+.tfx-service-grid.five{grid-template-columns:repeat(5,1fr);gap:26px;}
+.tfx-service-grid.four{grid-template-columns:repeat(4,1fr);}
+.tfx-service-grid.large{align-items:stretch;}
+.tfx-service-card{background:#fff;border:1px solid var(--tfx-line);border-radius:8px;padding:30px 22px;box-shadow:0 12px 38px rgba(6,26,51,.06);text-align:center;min-height:214px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;transition:.22s ease;}
+.tfx-service-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(6,26,51,.12);border-color:rgba(0,95,173,.26);}
+.tfx-service-icon{font-size:48px;color:var(--tfx-blue);width:62px;height:62px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;}
+.tfx-service-card .tfx-service-icon{color:var(--tfx-blue);}
+.tfx-service-card h3{margin-bottom:12px;color:var(--tfx-ink);font-size:16px;}
+.tfx-service-card p{font-size:14px;line-height:1.55;color:#4b5668;}
+.tfx-services-preview{padding-top:58px;padding-bottom:70px;}
+
+/* Why choose */
+.tfx-why-section{display:grid;grid-template-columns:minmax(280px,32%) 1fr;min-height:234px;overflow:hidden;background:#fff;border-top:1px solid rgba(6,26,51,.06);border-bottom:1px solid rgba(6,26,51,.06);}
+.tfx-why-image{background:url('/techflex_tt_brand_site/static/src/img/support-desk.webp') center center/cover no-repeat;min-height:234px;}
+.tfx-why-panel{background:linear-gradient(135deg,#061a33,#082a57);padding:44px max(48px,calc((100vw - 1120px)/2 + 48px)) 42px 86px;position:relative;color:#fff;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%);margin-left:-46px;display:flex;flex-direction:column;justify-content:center;}
+.tfx-why-panel h2{color:#fff;margin-top:10px;font-size:clamp(28px,3vw,42px);}
+.tfx-why-panel p{color:rgba(255,255,255,.82);}
+.tfx-benefit-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:22px;}
+.tfx-benefit{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start;}
+.tfx-benefit > span{width:44px;height:44px;border:1px solid rgba(255,91,18,.65);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;background:rgba(255,255,255,.05);}
+.tfx-benefit h3{color:#fff;font-size:14px;margin-bottom:6px;}
+.tfx-benefit p{font-size:13px;line-height:1.45;color:rgba(255,255,255,.82);}
+
+/* Rentals preview */
+.tfx-rentals-preview{padding-top:64px;padding-bottom:70px;background:#fff;}
+.tfx-rentals-layout{display:grid;grid-template-columns:260px 1fr;gap:44px;align-items:center;}
+.tfx-rental-intro h2{margin-top:8px;}
+.tfx-rental-intro p{font-size:15px;margin:20px 0 24px;}
+.tfx-rental-card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.tfx-rental-card{background:#fff;border:1px solid var(--tfx-line);border-radius:8px;box-shadow:0 12px 36px rgba(6,26,51,.05);padding:20px;text-align:center;display:flex;flex-direction:column;align-items:center;transition:.22s ease;color:var(--tfx-ink);min-height:210px;}
+.tfx-rental-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(6,26,51,.12);border-color:rgba(255,91,18,.25);color:var(--tfx-ink);}
+.tfx-rental-card img{height:90px;width:100%;object-fit:contain;margin:0 0 14px;}
+.tfx-rental-card h3{text-transform:uppercase;font-size:14px;margin:0 0 12px;}
+.tfx-rental-card span{font-size:13px;color:var(--tfx-orange);font-weight:800;}
+.tfx-rental-card p{font-size:14px;line-height:1.5;margin-top:8px;}
+.tfx-rental-card-grid.wide{grid-template-columns:repeat(4,1fr);}
+.tfx-rental-card-grid.wide .tfx-rental-card{min-height:255px;}
+
+/* About band */
+.tfx-about-band{position:relative;overflow:hidden;background:var(--tfx-navy);isolation:isolate;}
+.tfx-about-bg{position:absolute;inset:0;background:url('/techflex_tt_brand_site/static/src/img/about-building.webp') center center/cover no-repeat;opacity:.46;z-index:0;filter:saturate(110%);}
+.tfx-about-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,26,51,.96) 0%,rgba(6,26,51,.85) 35%,rgba(6,26,51,.72) 100%);z-index:1;}
+.tfx-about-band-inner{position:relative;z-index:2;display:grid;grid-template-columns:350px 1fr;gap:50px;align-items:center;min-height:250px;padding:48px 0;}
+.tfx-about-copy h2{color:#fff;margin:8px 0 16px;}
+.tfx-about-copy p{color:rgba(255,255,255,.9);font-size:15px;margin-bottom:22px;}
+.tfx-metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:rgba(5,23,47,.72);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.1);}
+.tfx-metric{min-height:154px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;border-right:1px solid rgba(255,255,255,.08);color:#fff;text-align:center;}
+.tfx-metric:last-child{border-right:0;}
+.tfx-metric svg{font-size:30px;margin-bottom:12px;color:#fff;}
+.tfx-metric strong{font-family:var(--tfx-heading);font-size:35px;line-height:1;color:#fff;}
+.tfx-metric span{margin-top:8px;font-size:13px;color:rgba(255,255,255,.88);}
+
+/* CTA + Footer */
+.tfx-support-band,.tfx-footer-cta{background:linear-gradient(90deg,#0b5fc4 0%,#0051ab 59%,#ff5b12 59%,#ff5b12 100%);color:#fff;position:relative;overflow:hidden;}
+.tfx-support-band::before,.tfx-footer-cta::before{content:"";position:absolute;left:55%;top:0;bottom:0;width:110px;background:var(--tfx-orange);transform:skewX(-25deg);z-index:0;}
+.tfx-support-band-inner,.tfx-footer-cta-inner{position:relative;z-index:1;min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.tfx-band-left,.tfx-footer-cta-left{display:flex;align-items:center;gap:20px;}
+.tfx-band-icon,.tfx-footer-cta-icon{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:32px;}
+.tfx-band-left h2,.tfx-footer-cta-left h2{color:#fff;text-transform:uppercase;font-size:26px;letter-spacing:-.02em;}
+.tfx-band-left p,.tfx-footer-cta-left p{color:rgba(255,255,255,.9);font-size:15px;}
+.tfx-band-button,.tfx-footer-cta-button{min-height:52px;padding:0 34px;background:var(--tfx-orange);color:#fff;font-weight:900;text-transform:uppercase;border-radius:6px;display:inline-flex;align-items:center;gap:12px;box-shadow:0 12px 26px rgba(0,0,0,.14);}
+.tfx-band-button:hover,.tfx-footer-cta-button:hover{color:#fff;transform:translateY(-2px);}
+.tfx-footer-cta{background:linear-gradient(90deg,#0b5fc4 0%,#0052ac 65%,#ff5b12 65%,#ff5b12 100%);}
+.tfx-footer-main{background:radial-gradient(circle at 70% 10%,rgba(13,114,206,.25),transparent 34%),linear-gradient(135deg,#061a33,#031224);color:#fff;padding:48px 0 22px;}
+.tfx-footer-grid{display:grid;grid-template-columns:1.6fr repeat(5,1fr);gap:34px;align-items:start;}
+.tfx-footer h3{color:#fff;text-transform:uppercase;font-size:13px;margin-bottom:16px;letter-spacing:.03em;position:relative;padding-bottom:10px;}
+.tfx-footer h3::after{content:"";position:absolute;left:0;bottom:0;width:28px;height:2px;background:var(--tfx-orange);}
+.tfx-footer a{display:block;color:rgba(255,255,255,.83);font-size:13px;margin-bottom:9px;}
+.tfx-footer a:hover{color:#fff;}
+.tfx-footer-brand p{color:rgba(255,255,255,.82);font-size:14px;line-height:1.6;margin:14px 0 18px;}
+.tfx-footer-logo img{width:218px;background:rgba(255,255,255,.96);padding:8px;border-radius:8px;}
+.tfx-socials{display:flex;gap:10px;flex-wrap:wrap;}
+.tfx-socials a{width:30px;height:30px;border-radius:50%;background:#fff;color:var(--tfx-navy);font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0;text-transform:uppercase;}
+.tfx-footer-contact{color:rgba(255,255,255,.86)!important;font-size:13px!important;line-height:1.5!important;margin:0 0 10px!important;display:flex;gap:9px;}
+.tfx-footer-contact span{color:#fff;}
+.tfx-footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:30px;padding-top:18px;color:rgba(255,255,255,.7);font-size:13px;}
+
+/* Inner pages */
+.tfx-page-hero{position:relative;isolation:isolate;background:linear-gradient(135deg,#061a33,#082a57);overflow:hidden;}
+.tfx-page-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,26,51,.98),rgba(6,26,51,.76)),url('/techflex_tt_brand_site/static/src/img/hero-techflex.webp') right center/cover no-repeat;z-index:-2;}
+.tfx-page-hero::after{content:"";position:absolute;right:-8%;top:-20%;width:280px;height:520px;background:linear-gradient(135deg,var(--tfx-orange),#ff7b22);transform:skewX(-25deg);opacity:.92;z-index:-1;}
+.tfx-page-hero-inner{min-height:300px;display:flex;flex-direction:column;justify-content:center;max-width:850px;padding:76px 0;}
+.tfx-page-hero h1{color:#fff;max-width:770px;text-transform:none;}
+.tfx-page-hero p{color:rgba(255,255,255,.9);max-width:660px;margin-top:20px;font-size:18px;}
+.tfx-service-detail{background:#fff;border:1px solid var(--tfx-line);border-radius:14px;box-shadow:var(--tfx-shadow);padding:34px;}
+.tfx-service-detail h2{font-size:24px;margin:8px 0 14px;}
+.tfx-service-detail p{font-size:15px;margin-bottom:16px;}
+.tfx-service-detail ul{padding-left:18px;margin:0;color:#4a5668;font-size:14px;line-height:1.8;}
+.tfx-large-text{font-size:17px!important;max-width:760px;}
+.tfx-story-grid{display:grid;grid-template-columns:1fr 520px;gap:54px;align-items:center;}
+.tfx-story-grid h2{margin:8px 0 20px;}
+.tfx-story-grid p + p{margin-top:16px;}
+.tfx-story-grid .tfx-btn{margin-top:26px;}
+.tfx-story-card{border-radius:20px;overflow:hidden;box-shadow:var(--tfx-shadow);border:1px solid var(--tfx-line);background:#fff;}
+.tfx-story-image{height:270px;background:url('/techflex_tt_brand_site/static/src/img/support-desk.webp') center center/cover no-repeat;}
+.tfx-story-stats{display:grid;grid-template-columns:repeat(3,1fr);}
+.tfx-story-stats div{padding:22px 18px;text-align:center;border-right:1px solid var(--tfx-line);}
+.tfx-story-stats div:last-child{border-right:0;}
+.tfx-story-stats strong{display:block;font-family:var(--tfx-heading);font-size:28px;color:var(--tfx-blue);}
+.tfx-story-stats span{font-size:12px;color:var(--tfx-muted);font-weight:800;text-transform:uppercase;}
+.tfx-values{background:#f7faff;}
+.tfx-team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+.tfx-team-card{background:#fff;border:1px solid var(--tfx-line);border-radius:16px;padding:34px 24px;text-align:center;box-shadow:0 16px 44px rgba(6,26,51,.08);}
+.tfx-team-avatar{width:86px;height:86px;border-radius:50%;background:linear-gradient(135deg,var(--tfx-blue),var(--tfx-navy));color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:42px;border:5px solid #eef5fd;}
+.tfx-team-card h3{font-size:19px;margin-bottom:10px;}
+.tfx-team-card p{font-size:14px;}
+
+/* Forms */
+.tfx-rental-main{background:#f7faff;}
+.tfx-rental-layout,.tfx-contact-layout{display:grid;grid-template-columns:360px 1fr;gap:36px;align-items:start;}
+.tfx-form-aside,.tfx-contact-card{background:linear-gradient(135deg,#061a33,#082a57);color:#fff;border-radius:18px;padding:36px;box-shadow:var(--tfx-shadow);position:sticky;top:160px;overflow:hidden;}
+.tfx-form-aside::after,.tfx-contact-card::after{content:"";position:absolute;right:-60px;bottom:-80px;width:160px;height:260px;background:var(--tfx-orange);transform:skewX(-25deg);opacity:.85;}
+.tfx-form-aside > *,.tfx-contact-card > *{position:relative;z-index:1;}
+.tfx-form-aside h2,.tfx-contact-card h2{color:#fff;margin:8px 0 16px;}
+.tfx-form-aside p,.tfx-contact-card p{color:rgba(255,255,255,.88);}
+.tfx-aside-list{display:grid;gap:12px;margin-top:24px;}
+.tfx-aside-list span,.tfx-contact-mini span{display:block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:10px 12px;color:#fff;font-size:13px;font-weight:800;}
+.tfx-contact-mini{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;}
+.tfx-form-panel{background:#fff;border:1px solid var(--tfx-line);box-shadow:var(--tfx-shadow);border-radius:18px;padding:34px;}
+.tfx-form{display:grid;gap:20px;}
+.tfx-form label{display:grid;gap:7px;font-size:13px;text-transform:uppercase;font-weight:900;color:#0b1e3d;letter-spacing:.01em;}
+.tfx-form input,.tfx-form textarea,.tfx-form select{width:100%;border:1px solid #d8e1ec;background:#fff;border-radius:8px;min-height:46px;padding:11px 13px;color:#13213a;font-size:15px;font-family:var(--tfx-font);outline:none;}
+.tfx-form textarea{resize:vertical;min-height:110px;}
+.tfx-form input:focus,.tfx-form textarea:focus,.tfx-form select:focus{border-color:var(--tfx-blue);box-shadow:0 0 0 4px rgba(0,95,173,.1);}
+.tfx-form-row{display:grid;gap:18px;}
+.tfx-form-row.two{grid-template-columns:1fr 1fr;}
+.tfx-form-row.three{grid-template-columns:repeat(3,1fr);}
+.tfx-form fieldset{border:1px solid #d8e1ec;border-radius:12px;padding:18px;margin:0;}
+.tfx-form legend{font-size:13px;text-transform:uppercase;font-weight:900;color:#0b1e3d;padding:0 8px;}
+.tfx-check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 16px;}
+.tfx-check-grid label,.tfx-radio-row label{display:flex!important;align-items:center;gap:8px;text-transform:none;font-weight:700;color:#455167;letter-spacing:0;font-size:14px;}
+.tfx-check-grid input,.tfx-radio-row input{width:auto;min-height:unset;}
+.tfx-radio-row{display:flex;flex-wrap:wrap;gap:16px;}
+.tfx-faq{background:#fff;}
+.tfx-faq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.tfx-faq-grid article{border:1px solid var(--tfx-line);border-radius:14px;padding:26px;background:#fff;box-shadow:0 12px 36px rgba(6,26,51,.06);}
+.tfx-faq-grid h3{font-size:18px;margin-bottom:10px;}
+.tfx-faq-grid p{font-size:14px;}
+
+/* Thank you */
+.tfx-thanks-hero .tfx-page-hero-inner{align-items:flex-start;}
+.tfx-thanks-hero .tfx-btn{margin-top:26px;}
+
+@media (max-width:1180px){
+  .tfx-shell{width:min(100% - 36px,1120px);}
+  .tfx-nav{gap:16px;}
+  .tfx-nav > a,.tfx-nav-dropdown > a{font-size:12px;}
+  .tfx-logo img{height:56px;}
+  .tfx-service-grid.five{grid-template-columns:repeat(3,1fr);}
+  .tfx-benefit-row{grid-template-columns:repeat(2,1fr);}
+  .tfx-rentals-layout{grid-template-columns:1fr;}
+  .tfx-rental-card-grid{grid-template-columns:repeat(4,1fr);}
+  .tfx-footer-grid{grid-template-columns:1.5fr repeat(3,1fr);}
+}
+
+@media (max-width:960px){
+  .tfx-topbar-inner{justify-content:center;}
+  .tfx-topbar-address{display:none!important;}
+  .tfx-mainbar-inner{height:86px;}
+  .tfx-logo img{height:50px;max-width:245px;}
+  .tfx-menu-toggle{display:flex;}
+  .tfx-nav{position:fixed;top:122px;left:18px;right:18px;background:#fff;border:1px solid var(--tfx-line);box-shadow:0 28px 70px rgba(6,26,51,.2);border-radius:16px;padding:18px;display:none;flex-direction:column;align-items:stretch;gap:0;max-height:calc(100vh - 144px);overflow:auto;}
+  body.tfx-mobile-menu-open .tfx-nav{display:flex;}
+  .tfx-nav > a,.tfx-nav-dropdown > a{padding:14px 10px;border-bottom:1px solid #edf2f7;justify-content:space-between;}
+  .tfx-nav > a::after,.tfx-nav-dropdown > a::after{display:none;}
+  .tfx-nav .tfx-nav-cta{margin-top:12px;justify-content:center;border-bottom:0;}
+  .tfx-nav-dropdown{display:block;}
+  .tfx-dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;padding:0 0 0 12px;min-width:0;background:#f7faff;border-radius:8px;margin:8px 0;display:none;}
+  .tfx-nav-dropdown.is-open .tfx-dropdown-menu{display:grid;}
+  .tfx-dropdown-menu a{font-size:13px;margin:0;}
+  .tfx-hero{min-height:auto;}
+  .tfx-hero-photo{inset:0;opacity:.34;}
+  .tfx-hero-overlay{background:linear-gradient(90deg,rgba(6,26,51,.98),rgba(6,26,51,.88));}
+  .tfx-hero::before{display:none;}
+  .tfx-hero-inner{grid-template-columns:1fr;min-height:auto;}
+  .tfx-hero-copy{padding:74px 0;max-width:720px;}
+  .tfx-hero-shape-one{right:-70px;opacity:.7;}
+  .tfx-hero-shape-two{right:70px;opacity:.55;}
+  .tfx-service-grid.five,.tfx-service-grid.four,.tfx-service-grid.large{grid-template-columns:repeat(2,1fr);}
+  .tfx-why-section{grid-template-columns:1fr;}
+  .tfx-why-image{min-height:260px;}
+  .tfx-why-panel{clip-path:none;margin-left:0;padding:42px 28px;}
+  .tfx-rental-card-grid,.tfx-rental-card-grid.wide{grid-template-columns:repeat(2,1fr);}
+  .tfx-about-band-inner{grid-template-columns:1fr;gap:28px;}
+  .tfx-metric-grid{grid-template-columns:repeat(2,1fr);}
+  .tfx-metric{border-bottom:1px solid rgba(255,255,255,.08);}
+  .tfx-story-grid,.tfx-rental-layout,.tfx-contact-layout{grid-template-columns:1fr;}
+  .tfx-form-aside,.tfx-contact-card{position:relative;top:auto;}
+  .tfx-team-grid,.tfx-faq-grid{grid-template-columns:repeat(2,1fr);}
+  .tfx-support-band,.tfx-footer-cta{background:linear-gradient(135deg,#0b5fc4,#0052ac);}
+  .tfx-support-band::before,.tfx-footer-cta::before{display:none;}
+  .tfx-support-band-inner,.tfx-footer-cta-inner{padding:18px 0;align-items:flex-start;flex-direction:column;}
+  .tfx-footer-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media (max-width:640px){
+  .tfx-shell{width:min(100% - 28px,1120px);}
+  .tfx-topbar{display:none;}
+  .tfx-mainbar-inner{height:78px;}
+  .tfx-nav{top:92px;left:14px;right:14px;}
+  .tfx-logo img{height:42px;max-width:214px;}
+  .tfx-menu-toggle{width:44px;height:44px;}
+  .tfx-site h1{font-size:38px;}
+  .tfx-site h2{font-size:28px;}
+  .tfx-section{padding:54px 0;}
+  .tfx-desktop-break{display:none;}
+  .tfx-hero-copy{padding:62px 0;}
+  .tfx-hero-copy p{font-size:15px;}
+  .tfx-hero-actions{gap:12px;}
+  .tfx-btn{width:100%;min-height:50px;padding:0 20px;}
+  .tfx-service-grid.five,.tfx-service-grid.four,.tfx-service-grid.large,.tfx-rental-card-grid,.tfx-rental-card-grid.wide,.tfx-benefit-row,.tfx-metric-grid,.tfx-team-grid,.tfx-faq-grid{grid-template-columns:1fr;}
+  .tfx-service-card{min-height:auto;padding:26px 20px;}
+  .tfx-why-image{min-height:210px;}
+  .tfx-benefit{grid-template-columns:42px 1fr;}
+  .tfx-about-band-inner{padding:42px 0;}
+  .tfx-metric{border-right:0;}
+  .tfx-page-hero-inner{min-height:260px;padding:56px 0;}
+  .tfx-page-hero p{font-size:16px;}
+  .tfx-form-panel,.tfx-form-aside,.tfx-contact-card{padding:24px;}
+  .tfx-form-row.two,.tfx-form-row.three,.tfx-check-grid,.tfx-story-stats{grid-template-columns:1fr;}
+  .tfx-story-stats div{border-right:0;border-bottom:1px solid var(--tfx-line);}
+  .tfx-story-stats div:last-child{border-bottom:0;}
+  .tfx-band-left,.tfx-footer-cta-left{align-items:flex-start;}
+  .tfx-band-left h2,.tfx-footer-cta-left h2{font-size:21px;}
+  .tfx-band-button,.tfx-footer-cta-button{width:100%;justify-content:center;}
+  .tfx-footer-grid{grid-template-columns:1fr;gap:26px;}
+  .tfx-footer-logo img{width:210px;}
+}
